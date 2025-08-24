@@ -87,6 +87,8 @@ PHRASE_POSTCODE = 6
 """ Contains a postal code. """
 PHRASE_COUNTRY = 7
 """ Contains the country name or code. """
+PHRASE_INTERSECTION = 8
+""" Contains streets forming an intersection. """
 
 
 def _phrase_compatible_with(ptype: PhraseType, ttype: TokenType,
@@ -105,6 +107,8 @@ def _phrase_compatible_with(ptype: PhraseType, ttype: TokenType,
         return ttype == TOKEN_POSTCODE
     if ptype == PHRASE_COUNTRY:
         return ttype == TOKEN_COUNTRY
+    if ptype == PHRASE_INTERSECTION:
+        return ttype in (TOKEN_WORD, TOKEN_PARTIAL)
 
     return ttype in (TOKEN_WORD, TOKEN_PARTIAL)
 

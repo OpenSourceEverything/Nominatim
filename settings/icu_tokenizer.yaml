@@ -1,5 +1,6 @@
 query-preprocessing:
     - step: split_japanese_phrases
+    - step: split_intersections
     - step: normalize
 normalization:
     - ":: lower ()"

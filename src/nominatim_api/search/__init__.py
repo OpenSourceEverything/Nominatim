@@ -16,5 +16,6 @@ from .query import (Phrase as Phrase,
                     PHRASE_COUNTY as PHRASE_COUNTY,
                     PHRASE_STATE as PHRASE_STATE,
                     PHRASE_POSTCODE as PHRASE_POSTCODE,
-                    PHRASE_COUNTRY as PHRASE_COUNTRY)
+                    PHRASE_COUNTRY as PHRASE_COUNTRY,
+                    PHRASE_INTERSECTION as PHRASE_INTERSECTION)
 from .query_analyzer_factory import (make_query_analyzer as make_query_analyzer)
